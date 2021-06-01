@@ -20,6 +20,7 @@ Contents
    users
    developers
    contribute
+   patch-review
 
 Indices and tables
 ==================
