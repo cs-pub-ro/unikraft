@@ -266,6 +266,14 @@ ENTRY(_libkvmplat_newstack)
 	movq %rdi, %rsp
 	movq %rdx, %rdi
 
+        pushq %rdi
+        mov $_stbootdata, %rdi
+        wrfsbase %rdi
+        popq %rdi
+
+        pushq %r14
+        rdfsbase %r14  // r14 == _stbootdata checks out
+        popq %r14
 	pushq $0x0
 	pushq $0x0
 

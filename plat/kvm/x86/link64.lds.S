@@ -80,6 +80,8 @@ SECTIONS
 
 	TLS_SECTIONS
 
+        BOOT_TLS_SECTIONS
+
 	/* Read-write data (initialized) */
 	. = ALIGN(__PAGE_SIZE);
 	_data = .;
@@ -89,6 +91,7 @@ SECTIONS
 		*(.data.*)
 	}
 	_edata = .;
+
 
 	/* Read-write data (uninitialized) */
 	. = ALIGN(__PAGE_SIZE);
